@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chilanka&display=swap');
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', cursive;
+}
+
+body{
+  background-color: #f1f1f1;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+/* root values */
+:root {
+  --container-color: #1a1e21;
+  --second-color: rgba(77, 228, 255);
+  --text-color: #172317;
+  --bg-color: #fff;
+}
+
+::selection {
+  color: var(--bg-color);
+  background: var(--second-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+section {
+  padding: 3rem 0 2rem;
+}
+
+.container {
+  max-width: 1068px;
+  margin: auto;
+  width: 100%;
+}
+
+a {
+  color: #fff;
+}
+
+/* Header */
+/* header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+}
+
+header.shadow{
+    background: var(--bg-color);
+    box-shadow: 0 1px 4px hsl(0 4% 14% / 10%);
+    transition: .5s;
+}
+
+header.shadow .logo{
+    color: var(--text-color);
+} */
+
+nav {
+  background-color: #fff;
+  height: 70px;
+  padding: 0px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo img {
+  height: 60px;
+}
+
+nav .logo p {
+  font-family: "Leckerli One", cursive;
+  font-size: 28px;
+  font-weight: 400;
+  color: rgb(255, 97, 124);
+}
+
+
+nav .links :not(:last-child) {
+  margin-right: 20px;
+}
+
+nav .links a {
+  text-decoration: none;
+  padding: 21px 0px 4px;
+  color: #000;
+  border-bottom: transparent;
+  transition: all 0.3s ease;
+}
+
+nav .links a:hover {
+  border-bottom: 3px solid rgb(255, 97, 124);
+}
+
+nav .buttons button {
+  padding: 7px;
+  font-size: 14px;
+  border-radius: 4px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+nav .buttons .signup {
+  background-color: #000;
+  color: #fff;
+  border-radius: 4px;
+  margin: 0px 14px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--bg-color);
+}
+
+.logo span {
+  color: var(--second-color);
+}
+
+.login {
+  padding: 8px 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 4px;
+  background: var(--second-color);
+  color: var(--bg-color);
+}
+
+.login:hover {
+  background: hsl(199, 98%, 56%);
+  transition: .5s;
+}
+
+.home {
+  width: 100%;
+  min-height: 440px;
+  background: url("images/banner2.png");
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-text {
+  color: var(--bg-color);
+  text-align: center;
+}
+
+.home-title {
+  font-size: 3.5rem;
+}
+
+.home-subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  /* background-color: #333; */
+  background-color: transparent;
+  /* color: white; */
+  color: #172317;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.step {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-left: 5px solid #333;
+}
+
+.step h2 {
+  margin-top: 0;
+}
+
+/* footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+} */
+
+/*----- .footer-1 -----*/
+
+footer{
+  padding: 40px 60px;
+  background-color: #FAFBFC;
+  color: #000;
+}
+
+.footer-1{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.footer-1 .first{
+  width: 400px;
+}
+
+.footer-1 .first p{
+  line-height: 25px;
+  font-size: 18PX;
+  text-align: justify;
+}
+
+.footer-1 .first .logo{
+  display: flex;
+  align-items: center;
+}
+
+.footer-1 .first .logo img{
+  height: 100px;
+}
+
+.footer-1 .first .logo span{
+  font-family: "Leckerli One", cursive;
+  font-size: 45px;
+  font-weight: 400;
+  color: rgb(255, 97, 124);
+}
+
+.footer-1 .second{
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.footer-1 .second a{
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.footer-1 .second a:hover{
+  color: #777;
+}
+
+.footer-1 .third{
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.footer-1 .third a{
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.footer-1 .third a:hover{
+  color: #777;
+}
+
+footer hr{
+  width: 90%;
+  margin: auto;
+}
+
+/*----- footer-2 -----*/
+
+.footer-2{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-2 p{
+  color: #000000;
+}
+
+
+.footer-2 .social i{
+  font-size: 28px;
+  cursor: pointer;
+  padding: 4px;
+  margin-left: 15px;
+  color: #000000;
+  transition: all 0.3s ease;
+}
+
+.footer-2 .social i:hover{
+  color: #777;
+}

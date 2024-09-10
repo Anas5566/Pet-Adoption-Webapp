@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Adoption Application Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="../Styles/index.css">
+  <link rel="shortcut icon" href="../Assets/favicon.ico" type="image/x-icon">
+</head>
+<style>
+  .form-section {
+    margin-bottom: 2rem;
+  }
+
+  nav .logo>.p {
+    margin-bottom: 0;
+  }
+
+  .container {
+    padding: 40px 120px 40px 120px;
+    background-color: #eeeeee;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  body{
+    background-color: #fff;
+  }
+</style>
+</head>
+
+<body>
+  <!-- Navbar -->
+
+  <nav>
+
+    <div class="logo">
+      <img src="../Assets/Home/logo1.png" alt="">
+      <p class="p">PawPrints</p>
+    </div>
+
+    <div class="links">
+      <a href="../HTML/index.html">Home</a>
+      <a href="../HTML/pet-listing.html">Pet Listing</a>
+      <a href="#">Blogs</a>
+      <a href="../HTML/contact.html">Contact Us</a>
+      <a href="#">About Us</a>
+    </div>
+
+    <div class="buttons">
+      <button class="signup">Get Started</button>
+      <button>Login</button>
+    </div>
+
+  </nav>
+
+  <!-- Form Section -->
+  <div class="container mt-5">
+    <h1 class="mb-4">Pet Adoption Application Form</h1>
+    <form id="applicationForm" novalidate>
+      <!-- Contact Information Section -->
+      <div class="form-section">
+        <h2>Contact Information (Adopter)</h2>
+        <div class="mb-3">
+          <label for="full_name" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="full-name" name="full_name" required>
+          <div class="invalid-feedback">Please enter your full name.</div>
+        </div>
+        <div class="mb-3">
+          <label for="identification_id" class="form-label">Identification ID (IC)</label>
+          <input type="text" class="form-control" id="identification-id" name="identification_id" required>
+          <div class="invalid-feedback">Please enter your identification ID.</div>
+        </div>
+        <div class="mb-3">
+          <label for="occupation" class="form-label">Occupation</label>
+          <input type="text" class="form-control" id="occupation" name="occupation" required>
+          <div class="invalid-feedback">Please enter your occupation.</div>
+        </div>
+        <div class="mb-3">
+          <label for="address" class="form-label">Address</label>
+          <input type="text" class="form-control" id="address" name="address" required>
+          <div class="invalid-feedback">Please enter your address.</div>
+        </div>
+        <div class="mb-3">
+          <label for="years_resided" class="form-label">Number of Years Resided</label>
+          <input type="number" class="form-control" id="years_resided" name="years_resided" required>
+          <div class="invalid-feedback">Please enter the number of years you have resided at your current
+            address.</div>
+        </div>
+        <div class="mb-3">
+          <label for="best_time_to_call" class="form-label">Best Time to Call</label>
+          <input type="text" class="form-control" id="best_time_to_call" name="best_time_to_call" required>
+          <div class="invalid-feedback">Please enter the best time to call you.</div>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+          <div class="invalid-feedback">Please enter a valid email address.</div>
+        </div>
+        <div class="mb-3">
+          <label for="contact_number" class="form-label">Contact Number</label>
+          <input type="tel" class="form-control" id="contact_number" name="contact_number" required>
+          <div class="invalid-feedback">Please enter your contact number.</div>
+        </div>
+      </div>
+
+      <!-- Family & Housing Section -->
+      <div class="form-section">
+        <h2>Family & Housing</h2>
+        <div class="mb-3">
+          <label for="home_type" class="form-label">Type of Home</label>
+          <input type="text" class="form-control" id="home_type" name="home_type"
+            placeholder="e.g., single family, town home, apartment, farm" required>
+          <div class="invalid-feedback">Please enter the type of home you live in (e.g., single family, town
+            home, apartment, farm).</div>
+        </div>
+        <div class="mb-3">
+          <label for="household_description" class="form-label">Household Description</label>
+          <select class="form-select" id="household_description" name="household_description" required>
+            <option value="" disabled selected>Select...</option>
+            <option value="Active">Active</option>
+            <option value="Noisy">Noisy</option>
+            <option value="Quiet">Quiet</option>
+            <option value="Average">Average</option>
+          </select>
+          <div class="invalid-feedback">Please describe your household.</div>
+        </div>
+        <div class="mb-3">
+          <label for="rent_rules" class="form-label">Rules Governing Pets (if you rent)</label>
+          <textarea class="form-control" id="rent_rules" name="rent_rules" rows="3"
+            placeholder="Please provide the rules governing pets and your landlord's name and number"></textarea>
+          <div class="form-text">By providing this information, you are allowing us to contact your landlord.
+            Please inform them of this call.</div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Family Allergies</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="allergy" id="allergy_yes" value="yes" required>
+            <label class="form-check-label" for="allergy_yes">Yes</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="allergy" id="allergy_no" value="no" required>
+            <label class="form-check-label" for="allergy_no">No</label>
+          </div>
+          <div class="form-text">Please select if anyone in the family has a known allergy to dogs.</div>
+          <div class="invalid-feedback">Please select if anyone in the family has a known allergy to dogs.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Agreement to Adopt</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="agreement" id="agreement_yes" value="yes" required>
+            <label class="form-check-label" for="agreement_yes">Yes</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="agreement" id="agreement_no" value="no" required>
+            <label class="form-check-label" for="agreement_no">No</label>
+          </div>
+          <div class="invalid-feedback">Please select if everyone in the family agrees with the decision to
+            adopt a dog.</div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Adequate Time for Pet</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="time_for_pet" id="time_yes" value="yes" required>
+            <label class="form-check-label" for="time_yes">Yes</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="time_for_pet" id="time_no" value="no" required>
+            <label class="form-check-label" for="time_no">No</label>
+          </div>
+          <div class="invalid-feedback">Please select if you have time to provide adequate love and attention
+            to the pet.</div>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary">Submit Application</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+
+  <footer>
+
+    <div class="footer-1">
+
+      <div class="first">
+
+        <div class="logo">
+          <img src="../Assets/Home/logo1.png" alt="">
+          <span>PawPrints</span>
+        </div>
+        <p>Lorem ipsum dolor sit amet consec Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod facere
+          consequatur accusantium atque et consectetur temporibus nihil voluptatu</p>
+
+      </div>
+
+      <div class="second">
+        <h3>Quick Links</h3>
+        <a href="#">Home</a>
+        <a href="#">Pet Listing</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact Us</a>
+        <a href="#">About Us</a>
+      </div>
+
+      <div class="third">
+        <h3>Reach Us</h3>
+        <a href="#"><i class="fa-solid fa-location-dot"></i> 123 Street, New York, USA</a>
+        <a href="#"><i class="fa-solid fa-phone"></i> +0123456789</a>
+        <a href="#"><i class="fa-solid fa-envelope"></i> pawprints@gmail.com</a>
+      </div>
+
+      <div class="second">
+        <h3>More...</h3>
+        <a href="#">Careers</a>
+        <a href="#">Our Team</a>
+        <a href="#">FAQ'S</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+
+    </div>
+
+    <hr>
+
+    <div class="footer-2">
+
+      <p>Copyright &copy; 2024 PawPrints.org.in. All rights reserved.</p>
+
+      <div class="social">
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-x-twitter"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-brands fa-facebook"></i>
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <!-- Form Validation Script -->
+  <script>
+    // Example script for form validation using Bootstrap
+    (function () {
+      'use strict';
+
+      // Fetch the form we want to apply custom Bootstrap validation styles to
+      var form = document.getElementById('applicationForm');
+
+      // Prevent submission if form is invalid
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+
+        form.classList.add('was-validated');
+      }, false);
+    })();
+  </script>
+  <script src="../Scripts/User Interactivity/application.js"></script>
+</body>
+
+</html>

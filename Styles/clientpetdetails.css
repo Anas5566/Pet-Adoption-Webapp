@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chilanka&display=swap');
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', cursive;
+}
+
+body{
+  background-color: #f1f1f1;
+}
+
+main{
+  padding: 40px 60px;
+  display: flex;
+  background-color: #fff;
+  justify-content: space-around;
+}
+
+/* Carousel */
+
+.carousel-section {
+  width: 40%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #777;
+  border-radius: 8px;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  margin: auto;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-images img {
+  width: 100%;
+  flex-shrink: 0;
+  display: block;
+  object-fit: cover;
+}
+
+.carousel-button {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: fit-content;
+}
+
+.carousel-button.left {
+  left: 10px;
+}
+
+.carousel-button.right {
+  right: 10px;
+}
+
+
+/* Details Section */
+
+.details{
+  padding: 20px 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  min-width: 40%;
+  max-width: 40%;
+  position: relative;
+}
+
+.flex{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 60px;
+}
+
+
+.name{
+  font-size: 40px;
+}
+
+.flex > .species{
+  font-size: 30px;
+  color: #777;
+}
+
+.details > div{
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.anchor{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  right: 50%;
+}
+
+
+.apply {
+  background-color: #ffffff;
+  color: #000;
+  padding: 6px 120px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 10px;
+  transition: all 0.3s ease;
+}
+
+.apply:hover{
+  background-color: #000;
+  color: #fff;
+} 
+
+span,.description{
+  font-weight: 500;
+}

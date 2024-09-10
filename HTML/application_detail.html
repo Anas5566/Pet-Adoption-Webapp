@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Details</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="shortcut icon" href="../Assets/favicon.ico" type="image/x-icon">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      font-family: 'Ubuntu', cursive;
+    }
+
+    a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .sidebar {
+      width: 250px;
+      height: 100vh;
+      background-color: #101e49;
+      border-top-right-radius: 12px;
+      border-bottom-right-radius: 12px;
+      padding: 10px 20px;
+    }
+
+    .sidebar .head {
+      color: #fff;
+      display: flex;
+      align-items: center;
+      margin: 35px 0;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .sidebar .head i {
+      font-size: 35px;
+    }
+
+    .sidebar .head div {
+      font-family: "Leckerli One", cursive;
+      font-size: 30px;
+    }
+
+    .sidebar-container {
+      padding: 0 15px;
+      margin-top: 70px;
+    }
+
+    .sidebar-container .hr {
+      border-bottom: 1px solid #777;
+    }
+
+    .sidebar-container .navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 20px 0;
+      padding: 5px;
+      color: #777;
+      cursor: pointer;
+    }
+
+
+    .sidebar-container .navigation i {
+      font-size: 8px;
+      display: none;
+    }
+
+    .sidebar-container .navigation {
+      font-size: 17px;
+    }
+
+    .color {
+      color: #fff;
+      display: block;
+    }
+
+    .color>span {
+      color: #fff;
+
+    }
+
+    .color>span>i {
+      display: block;
+      color: #fff;
+    }
+
+
+    body {
+      display: flex;
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    .container {
+      max-width: 800px;
+      overflow-y: auto;
+      padding-bottom: 20px;
+      scrollbar-width: none;
+    }
+
+    .card {
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card-title {
+      margin-bottom: 1rem;
+    }
+
+    .card-text {
+      margin-bottom: 0.5rem;
+    }
+
+    .card-header {
+      font-weight: bold;
+      background-color: #101e49;
+      color: white;
+    }
+
+    .btn-action {
+      width: 100px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="sidebar">
+
+    <div class="head">
+      <i class="fa-solid fa-paw"></i>
+      <div>PawPrints</div>
+    </div>
+
+    <div class="sidebar-container">
+      <a href="../HTML/admin.html" class="navigation" id="0"><span>Overview</span><i
+          class="fa-solid fa-circle dots"></i></a>
+      <div class="hr"></div>
+      <a href="../HTML/admin.html" class="navigation" id="1"><span>Pet Management</span><i
+          class="fa-solid fa-circle dots"></i></a>
+      <div class="hr"></div>
+      <a href="../HTML/admin.html" class="navigation color" id="2"><span>Applications</span><i
+          class="fa-solid fa-circle dots" style="display: block; color: #fff;"></i></a>
+      <div class="hr"></div>
+      <a href="../HTML/admin.html" class="navigation" id="3"><span>Queries</span><i
+          class="fa-solid fa-circle dots"></i></a>
+      <div class="hr"></div>
+    </div>
+
+  </div>
+
+
+  <div class="container mt-5">
+    <h1 class="mb-4 text-center">Application Details</h1>
+
+    <div class="card fade-in">
+      <div class="card-header">
+        Adopter's Personel Information
+      </div>
+      <div class="card-body">
+        <p class="card-text"><strong>Full Name:</strong> <span id="full_name">John Doe</span></p>
+        <p class="card-text"><strong>Identification ID (IC):</strong> <span id="identification_id">123456789</span></p>
+        <p class="card-text"><strong>Occupation:</strong> <span id="occupation">Software Engineer</span></p>
+        <p class="card-text"><strong>Address:</strong> <span id="address">123 Main St, Anytown, USA</span></p>
+        <p class="card-text"><strong>Number of Years Resided:</strong> <span id="years_resided">5</span></p>
+        <p class="card-text"><strong>Best Time to Call:</strong> <span id="best_time_to_call">Evenings</span>
+        </p>
+        <p class="card-text"><strong>Email Address:</strong> <span id="email">johndoe@example.com</span></p>
+        <p class="card-text"><strong>Contact Number:</strong> <span id="contact_number">+1234567890</span></p>
+      </div>
+    </div>
+
+    <div class="card fade-in">
+      <div class="card-header">
+        Family & Housing Information
+      </div>
+      <div class="card-body">
+        <p class="card-text"><strong>Type of Home:</strong> <span id="home_type">Single family</span></p>
+        <p class="card-text"><strong>Household Description:</strong> <span id="household_description">Active</span></p>
+        <p class="card-text"><strong>Rent Rules and Landlord's Information:</strong> <span id="rent_rules">Pets
+            allowed. Contact: Landlord Name, +1234567890</span></p>
+        <p class="card-text"><strong>Family Allergies:</strong> <span id="allergy">No</span></p>
+        <p class="card-text"><strong>Agreement to Adopt:</strong> <span id="agreement">Yes</span></p>
+        <p class="card-text"><strong>Adequate Time for Pet:</strong> <span id="time_for_pet">Yes</span></p>
+      </div>
+    </div>
+
+
+    <div class="card fade-in">
+      <div class="card-header">
+        Application Information
+      </div>
+      <div class="card-body">
+        <p class="card-text"><strong>Application Id:</strong> <span id="application-id">Single family</span></p>
+        <p class="card-text"><strong>Applied Pet Id:</strong> <span id="applied-pet-id">Active</span></p>
+        <p class="card-text"><strong>Applied Pet Name:</strong> <span id="applied-pet-name">Pets
+            allowed. Contact: Landlord Name, +1234567890</span></p>
+        <p class="card-text"><strong>Applied Pet Species:</strong> <span id="applied-pet-species">No</span></p>
+        <p class="card-text"><strong>Application Date:</strong> <span id="application-date">Yes</span></p>
+        <p class="card-text"><strong>Application Status:</strong> <span id="application-status">Yes</span></p>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-success btn-action me-2" id="approve">Approve</button>
+      <button class="btn btn-danger btn-action" id="reject">Reject</button>
+    </div>
+  </div>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <!-- Dynamic Data Script (Example) -->
+  <script src="../Scripts/User Interactivity/application-details.js"></script>
+</body>
+
+</html>

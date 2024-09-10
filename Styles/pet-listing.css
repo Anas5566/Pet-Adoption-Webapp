@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chilanka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', cursive;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+/*----- Navbar Styles -----*/
+
+nav {
+  background-color: #fff;
+  height: 70px;
+  padding: 0px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.5px solid #c7c7c7;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo img {
+  height: 60px;
+}
+
+nav .logo p {
+  font-family: "Leckerli One", cursive;
+  font-size: 28px;
+  font-weight: 400;
+  color: rgb(255, 97, 124);
+}
+
+
+nav .links :not(:last-child) {
+  margin-right: 20px;
+}
+
+nav .links a {
+  text-decoration: none;
+  padding: 21px 0px 4px;
+  color: #000;
+  border-bottom: transparent;
+  transition: all 0.3s ease;
+}
+
+nav .links a:hover {
+  border-bottom: 3px solid rgb(255, 97, 124);
+}
+
+nav .buttons button {
+  padding: 7px;
+  font-size: 14px;
+  border-radius: 4px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+nav .buttons .signup {
+  background-color: #000;
+  color: #fff;
+  border-radius: 4px;
+  margin: 0px 14px;
+}
+
+/*------ Quote Section ----------*/
+
+.quote-section {
+  background-color: #cfcfcf;
+  padding: 30px 20px;
+}
+
+.quote-section>div {
+  text-align: center;
+  font-family: Montserrat;
+}
+
+.quote-section div:first-child {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+
+/*----- Filters Section ------*/
+
+#flexit {
+  display: flex;
+}
+
+
+.filters {
+  background-color: #fff;
+  width: 255px;
+  padding: 15px 0 100px 0px;
+  border-right: 0.5px solid #c7c7c7;
+  position: initial;
+}
+
+.filters .head {
+  font-size: 19px;
+  font-weight: 500;
+  padding-left: 20px;
+}
+
+.filters .main {
+  margin-bottom: 30px;
+  font-size: 22px;
+}
+
+.filters .hr {
+  width: 90%;
+  margin: 10px auto;
+  border-top: 0.1px solid #c7c7c7;
+}
+
+.filters .drop-down {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 4px 0;
+  margin-bottom: 10px;
+}
+
+.filters .drop-down i {
+  padding: 0 20px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.filters .options {
+  padding-left: 20px;
+}
+
+.filters .js-hidden {
+  display: none;
+}
+
+.filters .options div {
+  margin-bottom: 5px;
+}
+
+.filters .options input {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid black;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+}
+
+.filters .options input:checked {
+  background-color: #000;
+  color: #fff;
+  border: 2px solid black;
+}
+
+input[type="checkbox"]:checked::after {
+  content: " ✔ ";
+  position: relative;
+  bottom: 3px;
+  left: 1.5px;
+}
+
+.filters .options label {
+  font-size: 17px;
+  margin-left: 5px;
+}
+
+/* Pet List Section */
+
+.pet-list {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+
+.pet-list .items {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.pet-list .items .container {
+  width: 100%;
+  height: 320px;
+  position: relative;
+  cursor: pointer;
+}
+
+.pet-list .items .container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pet-list .items .descript {
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pet-list .items .descript span {
+  font-size: 18px;
+}
+
+.pet-list .items .descript span:first-child {
+  font-size: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.pet-list .items .descript span:first-child:hover {
+  text-decoration: underline;
+  color: chocolate;
+}
+
+.pet-list .items .descript span:nth-child(2) {
+  color: #535766;
+  font-size: 16px;
+}
+
+.pet-list .items > a{
+  text-decoration: none;
+  color: #000;
+}
+
+.pet-list .items button {
+  display: block;
+  margin: 6px auto;
+  width: 95%;
+  padding: 8px 0;
+  font-size: 18px;
+  background-color: #fff;
+  color: #000;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.pet-list .items button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Apply Filter Button */
+
+.apply-filter {
+  font-size: 20px;
+  color: #0a5e5e;
+  cursor: pointer;
+  border: 1px solid #0a5e5e;
+  width: fit-content;
+  margin: auto;
+  padding: 4px 28px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.apply-filter:hover {
+  background-color: #0a5e5e;
+  color: #fff;
+}
+
+/*----- .footer-1 -----*/
+
+footer {
+  padding: 40px 60px;
+  background-color: #FAFBFC;
+  color: #000;
+}
+
+.footer-1 {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.footer-1 .first {
+  width: 400px;
+}
+
+.footer-1 .first p {
+  line-height: 25px;
+  font-size: 18PX;
+  text-align: justify;
+}
+
+.footer-1 .first .logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-1 .first .logo img {
+  height: 100px;
+}
+
+.footer-1 .first .logo span {
+  font-family: "Leckerli One", cursive;
+  font-size: 45px;
+  font-weight: 400;
+  color: rgb(255, 97, 124);
+}
+
+.footer-1 .second {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.footer-1 .second a {
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.footer-1 .second a:hover {
+  color: #777;
+}
+
+.footer-1 .third {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.footer-1 .third a {
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.footer-1 .third a:hover {
+  color: #777;
+}
+
+footer hr {
+  width: 90%;
+  margin: auto;
+}
+
+/*----- footer-2 -----*/
+
+.footer-2 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-2 p {
+  color: #000000;
+}
+
+
+.footer-2 .social i {
+  font-size: 28px;
+  cursor: pointer;
+  padding: 4px;
+  margin-left: 15px;
+  color: #000000;
+  transition: all 0.3s ease;
+}
+
+.footer-2 .social i:hover {
+  color: #777;
+}
