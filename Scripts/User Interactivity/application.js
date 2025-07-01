@@ -33,8 +33,6 @@ function insertFormData() {
       petSpecies: data.species
     };
 
-    console.log(formData)
-
     const jsonFormData = JSON.stringify(formData);
 
     try {
@@ -45,6 +43,7 @@ function insertFormData() {
         },
         body: jsonFormData,
       });
+
 
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);

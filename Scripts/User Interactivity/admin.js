@@ -14,7 +14,8 @@ changeMainSection();
 
 function changeColorAndDisplayDot() {
 
-  navigation.forEach(element => {
+  navigation.forEach((element, index) => {
+
 
     // Ensures that color and dot visibility when page the loads
     if (element === navigation[navigationId]) {
@@ -24,6 +25,8 @@ function changeColorAndDisplayDot() {
 
 
     element.addEventListener('click', () => {
+
+      localStorage.setItem("Navigation Id", index)
 
       // Changes color of clicked element
       navigation.forEach(text => text.style.color = '#777');

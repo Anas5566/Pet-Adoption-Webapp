@@ -61,6 +61,7 @@ async function addNewPet() {
         },
         body: jsonFormData
       });
+      console.log(jsonFormData);
 
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);

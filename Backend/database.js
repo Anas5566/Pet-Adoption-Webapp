@@ -1,27 +1,32 @@
 const mysql = require('mysql2');
 
+
 const pool = mysql.createPool({
-  host: process.env.MYSQL_HOST,
-  user: process.env.MYSQL_USER,
-  password: process.env.MYSQL_PASSWORD,
-  database: process.env.MYSQL_DATABASE,
+  host: "localhost",
+  user: "root",
+  port: 3350,
+  password: "Anas@123",
+  database: "petadoption",
 }).promise();
 
 
 // ---------- User side queries --------- //
 
 // Get home page featured pets
-async function getFeaturesPets() {
-  const query = `SELECT * FROM newpets WHERE featuredPets = 'Yes'`;
-  const [result] = await pool.query(query);
-  return result;
+async function getFeaturedPets() {
+  try {
+    const query = `SELECT * FROM Pets WHERE featuredPets = 'Yes'`;
+    const [result] = await pool.query(query);
+    return result;
+  } catch (error) {
+    console.error('Error fetching featured pets:', error);
+    throw error; // rethrow the error so the caller can handle it
+  }
 }
-
-
 
 // Get pet list section items
 async function getPets() {
-  const query = `SELECT * FROM newPets`;
+  const query = `SELECT * FROM Pets`;
   const [result] = await pool.query(query);
   return result;
 }
@@ -34,7 +39,7 @@ async function contactForm(name, email, subject, message) {
 
 // Get single pet details
 async function getSinglePet(id) {
-  const query = `SELECT * FROM newpets WHERE id = ?`;
+  const query = `SELECT * FROM Pets WHERE id = ?`;
   const [result] = await pool.query(query, [id]);
   return result;
 }
@@ -68,13 +73,13 @@ async function applicationForm(data) {
 
 
 async function getNoOfPets() {
-  const query = `SELECT COUNT(*) AS count FROM newPets WHERE adoptionStatus = 'Available';`;
+  const query = `SELECT COUNT(*) AS count FROM Pets WHERE adoptionStatus = 'Available';`;
   const [result] = await pool.query(query);
   return result;
 }
 
 async function getNoOfAdoptions() {
-  const query = `SELECT COUNT(*) AS count FROM newPets WHERE adoptionStatus = 'Adopted';`;
+  const query = `SELECT COUNT(*) AS count FROM Pets WHERE adoptionStatus = 'Adopted';`;
   const [result] = await pool.query(query);
   return result;
 }
@@ -104,25 +109,25 @@ async function getNoOfRejectedApplications() {
 }
 
 async function getAdminPetList() {
-  const query = `SELECT * FROM newpets`;
+  const query = `SELECT * FROM Pets`;
   const [result] = await pool.query(query);
   return result;
 }
 
 async function newPet(petName, species, breed, age, period, size, gender, location, description, adoptionStatus, specialNeeds) {
   const query = `
-  INSERT INTO newPets (petName, species, breed, age, period, size, gender, location, description, adoptionStatus) 
+  INSERT INTO Pets (petName, species, breed, age, period, size, gender, location, description, adoptionStatus) 
   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
   pool.query(query, [petName, species, breed, age, period, size, gender, location, description, adoptionStatus, specialNeeds]);
 }
 
 async function deleteAPet(id) {
-  const query = 'DELETE FROM newpets WHERE id = ?';
+  const query = 'DELETE FROM Pets WHERE id = ?';
   pool.query(query, [id]);
 }
 
 async function updateAPet(id) {
-  const query = 'UPDATE newpets SET adoptionStatus = ? WHERE id = ?';
+  const query = 'UPDATE Pets SET adoptionStatus = ? WHERE id = ?';
   await pool.query(query, ['Adopted', id]);
 }
 
@@ -154,7 +159,7 @@ async function uploadImages(name, path) {
 }
 
 
-module.exports = {getPets, getFeaturesPets, contactForm, getNoOfPets, getNoOfAdoptions,
+module.exports = {getPets, getFeaturedPets, contactForm, getNoOfPets, getNoOfAdoptions,
   getNoOfApplications, getNoOfPendingApplications, getNoOfApprovedApplications, getNoOfRejectedApplications,
   getAdminPetList, newPet, getSinglePet, applicationForm,
   deleteAPet, updateAPet, getApplications, getApplicationDetails,

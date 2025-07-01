@@ -48,12 +48,12 @@ app.post('/api/image',upload.single('image'), async (req, res) =>{
 
 // Get home page featured pets
 app.get('/api/featuredPets', async (req, res) => {
-  const featuredItems = await db.getFeaturesPets();
+  const featuredItems = await db.getFeaturedPets();
   res.json(featuredItems);
 });
 
 // Get pet list section items
-app.get('/api/pets', async (req, res) => {
+app.get('/api/pets', async (req, res) => {``
   const items = await db.getPets();
   res.json(items);
 });
@@ -217,34 +217,6 @@ app.put('/api/updateAppStatusRej/:id', async (req, res) => {
     res.send('Error in api' + error);
   }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 app.listen(port, () => {
   console.log(`Server is runnning at http://localhost:${port}`);

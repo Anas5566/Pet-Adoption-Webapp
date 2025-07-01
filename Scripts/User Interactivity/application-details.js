@@ -27,7 +27,7 @@ function updateAdopterInfo(details) {
   // Convert date
   const dateFromDatabase = new Date(details.appliedAt);
   const formattedDate = dateFromDatabase.toLocaleDateString('en-US');
-  document.getElementById('applied-pet-species').textContent = formattedDate;
+  document.getElementById('application-date').textContent = formattedDate;
 }
 
 async function fetchDetails() {
@@ -93,7 +93,6 @@ async function getIdOfNavigation() {
 
   const navigationButtons = document.querySelectorAll('.navigation');
 
-  console.log(navigationButtons);
   navigationButtons.forEach((button) => {
     button.addEventListener('click', () => {
       const navigationId = button.getAttribute('id');
